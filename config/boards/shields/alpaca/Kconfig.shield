@@ -1,0 +1,11 @@
+# Copyright (c) 2022 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_ALPACA_LEFT
+	def_bool $(shields_list_contains,alpaca_left)
+
+config SHIELD_ALPACA_RIGHT
+	def_bool $(shields_list_contains,alpaca_right)
+
+config SHIELD_ALPACA_DONGLE
+	def_bool $(shields_list_contains,alpaca_dongle)
