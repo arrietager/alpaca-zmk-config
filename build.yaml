@@ -13,9 +13,9 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: alpaca_dongle
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: alpaca_right
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: alpaca_left
