@@ -1,0 +1,28 @@
+#include <physical_layouts.dtsi>
+
+/ {
+    physical_layout_alpaca: physical_layout_alpaca {
+        compatible = "zmk,physical-layout";
+        display-name = "alpaca";
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100  100   10       0     0     0>
+            , <&key_physical_attrs 100 100  200    0       0     0     0>
+            , <&key_physical_attrs 100 100  300   10       0     0     0>
+            , <&key_physical_attrs 100 100    0  110       0     0     0>
+            , <&key_physical_attrs 100 100  100  110       0     0     0>
+            , <&key_physical_attrs 100 100  200  100       0     0     0>
+            , <&key_physical_attrs 100 100  300  100       0     0     0>
+            , <&key_physical_attrs 100 100  350  250    1500   450   350>
+            , <&key_physical_attrs 100 100  450  250    1500   450   350>
+            , <&key_physical_attrs 100 100 1000   10       0     0     0>
+            , <&key_physical_attrs 100 100  900    0       0     0     0>
+            , <&key_physical_attrs 100 100  800   10       0     0     0>
+            , <&key_physical_attrs 100 100 1100  110       0     0     0>
+            , <&key_physical_attrs 100 100 1000  110       0     0     0>
+            , <&key_physical_attrs 100 100  900  100       0     0     0>
+            , <&key_physical_attrs 100 100  800  110       0     0     0>
+            , <&key_physical_attrs 100 100  750  250 (-1500)   750   350>
+            , <&key_physical_attrs 100 100  650  250 (-1500)   750   350>
+            ;
+    };
+};
