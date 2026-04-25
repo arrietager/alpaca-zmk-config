@@ -49,7 +49,7 @@
         };
         combo_del {
             timeout-ms = <30>;
-            key-positions = <13 14>;
+            key-positions = <11 12>;
             bindings = <&kp DEL>;
             layers = <AL1>;
         };
@@ -169,14 +169,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        td_kr: tapdance_keyrepeat {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <190>;
-            quick-tap-ms = <250>;
-            flavor = "tap-preferred";
-            bindings = <&kp LSHIFT>, <&key_repeat>;
-        };
   };
 
 //                  0       1       2                   3       4           5
@@ -190,7 +182,7 @@
         bindings = <
                             &hm_l LCTRL L    &hm_l LALT G    &hm_l LGUI D                &hm_r RGUI H    &hm_r LALT U        &hm_r RCTRL O
             &hl_l NUM I     &hl_l SYM S      &hl_l COD R     &hl_l NAV T                 &hl_r NAV N     &hl_r COD E         &hl_r SYM A     &hl_r NUM C
-                                             &td_kr     &td LC(LS(LALT)) ENTER      &td RSHIFT SPACE  &sl AL2
+                                             &key_repeat     &td LC(LS(LALT)) ENTER      &td RSHIFT SPACE  &sl AL2
         >;
         };
 
@@ -199,7 +191,7 @@
         bindings = <
                     &kp V       &kp W               &kp M               &kp F       &td DQT SQT         &kp Z
         &kp Q       &kp J       &kp P               &kp K               &kp B       &td COMMA DOT         &kp X       &kp Y
-                                &none             &trans                &trans      &none
+                                &kp LSHIFT             &trans                &trans      &none
         >;
         };
 
