@@ -43,40 +43,40 @@
         };
         combo_tab {
             timeout-ms = <30>;
-            key-positions = <6 7>;
+            key-positions = <7 8>;
             bindings = <&kp TAB>;
             layers = <AL1>;
         };
         combo_del {
             timeout-ms = <30>;
-            key-positions = <12 13>;
+            key-positions = <13 14>;
             bindings = <&kp DEL>;
             layers = <AL1>;
         };
-	number_2 {
-	    timeout-ms = <200>;
-	    key-positions = <3 4>;
-	    bindings = <&kp N2>;
-	    layers = <NUM>;
-	};
-	number_4 {
-	    timeout-ms = <200>;
-	    key-positions = <4 5>;
-	    bindings = <&kp N4>;
-	    layers = <NUM>;
-	};
-	number_7 {
-	    timeout-ms = <200>;
-	    key-positions = <10 11>;
-	    bindings = <&kp N7>;
-	    layers = <NUM>;
-	};
-	number_9 {
-	    timeout-ms = <200>;
-	    key-positions = <11 12>;
-	    bindings = <&kp N9>;
-	    layers = <NUM>;
-	};
+    	number_2 {
+    	    timeout-ms = <200>;
+    	    key-positions = <3 4>;
+    	    bindings = <&kp N2>;
+    	    layers = <NUM>;
+    	};
+    	number_4 {
+    	    timeout-ms = <200>;
+    	    key-positions = <4 5>;
+    	    bindings = <&kp N4>;
+    	    layers = <NUM>;
+    	};
+    	number_7 {
+    	    timeout-ms = <200>;
+    	    key-positions = <10 11>;
+    	    bindings = <&kp N7>;
+    	    layers = <NUM>;
+    	};
+    	number_9 {
+    	    timeout-ms = <200>;
+    	    key-positions = <11 12>;
+    	    bindings = <&kp N9>;
+    	    layers = <NUM>;
+    	};
         combo_nav {
             timeout-ms = <30>;
             key-positions = <5 12>;
@@ -161,13 +161,21 @@
             bindings = <&mo>, <&kp>;
         hold-trigger-key-positions = <0 1 2 6 7 8 9>; // left hand
         };
-    td: tapdance {
+        td: tapdance {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <190>;
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+        };
+        td_kr: tapdance_keyrepeat {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <190>;
+            quick-tap-ms = <250>;
+            flavor = "tap-preferred";
+            bindings = <&kp LSHIFT>, <&key_repeat>;
         };
   };
 
@@ -182,7 +190,7 @@
         bindings = <
                             &hm_l LCTRL L    &hm_l LALT G    &hm_l LGUI D                &hm_r RGUI H    &hm_r LALT U        &hm_r RCTRL O
             &hl_l NUM I     &hl_l SYM S      &hl_l COD R     &hl_l NAV T                 &hl_r NAV N     &hl_r COD E         &hl_r SYM A     &hl_r NUM C
-                                             &key_repeat     &td LC(LS(LALT)) ENTER      &td RSHIFT SPACE  &sl AL2
+                                             &td_kr     &td LC(LS(LALT)) ENTER      &td RSHIFT SPACE  &sl AL2
         >;
         };
 
@@ -226,7 +234,7 @@
         nav {
         display-name = "NAV";
         bindings = <
-                            &kp ESC        &kp LG(LS(LBKT))    &kp LG(LS(RBKT))         &td LG(V) LG(C)     &td PG_UP UP    &td LC(V) LS(C)
+                            &kp ESC        &kp LG(LS(LBKT))    &kp LG(LS(RBKT))         &td LG(V) LG(C)     &td PG_UP UP    &td LC(V) LC(C)
         &td LG(GRAVE) TAB   &kp DEL &kp LG(LS(TAB))        &kp LG(TAB)         &td HOME LEFT            &td PG_DN DOWN  &td END RIGHT   &kp RET
                                 &kp LCTRL   &trans                         &trans          &kp RGUI
         >;
