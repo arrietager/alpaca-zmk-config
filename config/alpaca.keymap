@@ -20,12 +20,13 @@
 /* Layers */
 #define AL1 0
 #define AL2 1
-#define COD 2
-#define SYM 3
-#define NUM 4
-#define NAV 5
-#define BT 6
-#define MED 7
+#define AC2 2
+#define COD 3
+#define SYM 4
+#define NUM 5
+#define NAV 6
+#define BT 7
+#define MED 8
 / { 
     combos {
         compatible = "zmk,combos";
@@ -191,7 +192,16 @@
         bindings = <
                     &kp V       &kp W               &kp M               &kp F       &td DQT SQT         &kp Z
         &kp Q       &kp J       &kp P               &kp K               &kp B       &td COMMA DOT         &kp X       &kp Y
-                                &kp LSHIFT             &trans                &trans      &none
+                                &sl AC2             &trans                &trans      &none
+        >;
+        };
+
+                alphacaps2 {
+                display-name = "AL2";
+        bindings = <
+                    &kp LS(V)       &kp LS(W)               &kp LS(M)               &kp LS(F)       &td DQT SQT         &kp LS(Z)
+        &kp LS(Q)       &kp LS(J)       &kp LS(P)               &kp LS(K)               &kp LS(B)       &td COMMA DOT         &kp LS(X)       &kp LS(Y)
+                                &none             &trans                &trans      &none
         >;
         };
 
