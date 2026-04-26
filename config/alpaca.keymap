@@ -197,7 +197,7 @@
         };
 
                 alphacaps2 {
-                display-name = "AL2";
+                display-name = "AC2";
         bindings = <
                     &kp LS(V)       &kp LS(W)               &kp LS(M)               &kp LS(F)       &td DQT SQT         &kp LS(Z)
         &kp LS(Q)       &kp LS(J)       &kp LS(P)               &kp LS(K)               &kp LS(B)       &td COMMA DOT         &kp LS(X)       &kp LS(Y)
