@@ -20,13 +20,12 @@
 /* Layers */
 #define AL1 0
 #define AL2 1
-#define AC2 2
-#define COD 3
-#define SYM 4
-#define NUM 5
-#define NAV 6
-#define BT 7
-#define MED 8
+#define COD 2
+#define SYM 3
+#define NUM 4
+#define NAV 5
+#define BT 6
+#define MED 7
 / { 
     combos {
         compatible = "zmk,combos";
@@ -181,8 +180,8 @@
                 alpha1 {
                 display-name = "AL1";
         bindings = <
-                            &hm_l LCTRL L    &hm_l LALT G    &hm_l LGUI D                &hm_r RGUI H    &hm_r LALT U        &hm_r RCTRL O
-            &hl_l NUM I     &hl_l SYM S      &hl_l COD R     &hl_l NAV T                 &hl_r NAV N     &hl_r COD E         &hl_r SYM A     &hl_r NUM C
+                            &hm_l LCTRL L    &hm_l LALT G    &hm_l LGUI D                &hm_r RGUI H    &hm_r LALT U        &hm_r RCTRL C
+            &hl_l NUM A     &hl_l SYM R      &hl_l COD S     &hl_l NAV T                 &hl_r NAV N     &hl_r COD E         &hl_r SYM I     &hl_r NUM O
                                              &key_repeat     &td LC(LS(LALT)) ENTER      &td RSHIFT SPACE  &sl AL2
         >;
         };
@@ -192,16 +191,7 @@
         bindings = <
                     &kp V       &kp W               &kp M               &kp F       &td DQT SQT         &kp Z
         &kp Q       &kp J       &kp P               &kp K               &kp B       &td COMMA DOT         &kp X       &kp Y
-                                &sl AC2             &trans                &trans      &none
-        >;
-        };
-
-                alphacaps2 {
-                display-name = "AC2";
-        bindings = <
-                    &kp LS(V)       &kp LS(W)               &kp LS(M)               &kp LS(F)       &td DQT SQT         &kp LS(Z)
-        &kp LS(Q)       &kp LS(J)       &kp LS(P)               &kp LS(K)               &kp LS(B)       &td COMMA DOT         &kp LS(X)       &kp LS(Y)
-                                &none             &trans                &trans      &none
+                                &kp LSHIFT          &trans                &trans      &none
         >;
         };
 
