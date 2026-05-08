@@ -180,8 +180,8 @@
                 alpha1 {
                 display-name = "AL1";
         bindings = <
-                            &hm_l LCTRL L    &hm_l LALT G    &hm_l LGUI D                &hm_r RGUI H    &hm_r LALT U        &hm_r RCTRL O
-            &hl_l NUM A     &hl_l SYM R      &hl_l COD S     &hl_l NAV T                 &hl_r NAV N     &hl_r COD E         &hl_r SYM I     &hl_r NUM C
+                            &hm_l LCTRL H    &hm_l LALT G    &hm_l LGUI D                &hm_r RGUI L    &hm_r LALT U        &hm_r RCTRL C
+            &hl_l NUM A     &hl_l SYM R      &hl_l COD S     &hl_l NAV T                 &hl_r NAV N     &hl_r COD E         &hl_r SYM I     &hl_r NUM O
                                              &key_repeat     &td LC(LS(LALT)) ENTER      &td RSHIFT SPACE  &sl AL2
         >;
         };
